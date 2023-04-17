@@ -8,7 +8,8 @@ import {useState} from "react"
 export const CardFunctionalC = () => {
     const [title, setTitle] = useState("Funcional");
     const [body, setBody] = useState("Este es un componente de funcional");
-    return (
+    
+    return(
         <div className={styles.container}>
             <div className={styles.card}>
                 <h1>{title}</h1>

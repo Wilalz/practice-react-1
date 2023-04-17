@@ -3,6 +3,8 @@ import { Title } from './components/Title'
 import { Post } from "./components/Post"
 import { CardClassC } from './components/ejercicio1/CardClassC'
 import { CardFunctionalC } from './components/ejercicio1/CardFunctionalC'
+import { CardGroup } from './components/ejercicio2/CardGroup'
+import { CardCoche } from './components/ejercicio3/CardCoche'
 
 function App() {
   // HOOKS  ---------------------------------
@@ -29,12 +31,16 @@ function App() {
   //   return <h3>{likes}</h3>;
   //};
 
+
   return (
     <div className="App">
       <Title>Hooks --- useState</Title>
       <Post text="Me gusta!"></Post> 
       <CardClassC />
       <CardFunctionalC />
+      <hr />
+      <CardGroup />
+      <hr />
 
 
     </div>

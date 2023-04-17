@@ -3,16 +3,14 @@ import { useState } from "react"
 export const Post = ({text}) => {
     const [likes, setLikes] = useState(0);
 
-
     return (
-        <div>
-            <button onClick={ ()=> setLikes(likes+1) }>
+        <div className="btn-count">
+            <button 
+                onClick={ ()=> setLikes(likes+1) }>
                 {text}
             </button>
-            <div>{likes}</div>
+            <div className="card-likes"><span className="quantity">{likes}</span> &nbsp; me gusta!</div>
         </div>
     )
-
-
-
+    
 }
