@@ -1,3 +1,4 @@
+import styles from "../../styles.module.css"
 import { Title } from "../Title"
 import { ElephantEmoji } from "./elephantEmoji"
 import { ButtonAdd } from "./ButtonAdd"
@@ -13,16 +14,19 @@ export const CardGroup = () => {
 
 
     return (
-        <div className="card-elephants">
+        <div className={styles.cardElephants}>
             <Title>Add Elephants
                 <ElephantEmoji />
             </Title>
-            <ButtonAdd className="btn-count" 
+
+            <ButtonAdd className={styles.btnCount} 
                 quantity={quantity} setQuantity={setQuantity}
                 >Add
             </ButtonAdd>
-            {/* <div className="elephants-group">{quantity}</div> */}
-            <SpiderWeb quantity={quantity} />
+
+            {/* <div className={styles.elephantsGroup}>{quantity}</div> */}
+            <SpiderWeb setQuantity={setQuantity} />
+            
             <Count quantity={quantity}/>
 
 

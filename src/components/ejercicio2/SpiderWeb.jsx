@@ -11,7 +11,7 @@ export const SpiderWeb = ({quantity}) => {
             return (
                 <div>
                 <ElephantEmoji />
-                <p>Acá quiero renderizar un elefante cada que agrego uno, pero todavia no funciona</p>
+                <p>Acá quiero renderizar un elefante cada que agrego uno, pero todavia no </p>
 
 
             </div>

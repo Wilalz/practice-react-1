@@ -1,0 +1,105 @@
+:root {
+  --border-color: #cccaca;
+}
+
+h2 {
+    font-size: 3em;
+  }
+  
+button {
+  border-radius: 8px;
+  border: 1px solid transparent;
+  padding: 10px;
+  margin: 2px;
+  font-size: 14px;
+  font-family: inherit;
+  background-color: #cccccc;
+}
+button:hover {
+  border-color: #646cff;
+}
+
+.container {
+  border: var(--border-color) solid 1px;
+}
+
+.quantity {
+  margin: 2px;
+}
+
+/* Ejercio 2 - elephans */
+
+.cardElephants {
+  display: flex;
+  /* justify-content: center; */ /* para centar horizontalmente */ 
+  align-items: center;   /* para centrar verticalmente */
+  flex-direction: column;
+  border: var(--border-color) solid 1px;
+}
+
+
+.btnCount {
+  /* border: rgb(46, 160, 11) solid ; */
+  padding: 20px;
+  display: inline-block;
+  margin: 10px;
+}
+
+
+.cardLikes {
+  /* border: rgb(0, 38, 255) solid; */
+  width: 150px;
+  height: 80px;
+  background-color: aquamarine;
+  border-radius: 10px;
+  font-weight: 500;
+  padding: 0px;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 10px;
+}
+
+.cardLikes .quantity{
+  /* border: rgb(255, 0, 234) solid; */
+  font-size: 30px;
+}
+
+.cardLikes span{
+  /* border: rgb(255, 0, 234) solid; */
+  font-size: 40px;
+}
+
+
+/* Ejercio 3 - coche */
+.cardCoche {
+  display: flex;
+  justify-content: space-between;
+  width: 60%;
+
+}
+
+.carState {
+  font-size: 20px;
+  font-weight: 500;
+  line-height: 15px;
+  margin: 10px;
+  padding-right: 30px;
+  
+}
+
+.carState .state {
+  color: blue;
+
+
+}
+
+
+
+
+
+
+
+
+
