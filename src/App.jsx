@@ -1,36 +1,14 @@
 import styles from "./styles.module.css"
 import './App.css'
 import { Title } from './components/Title'
-import { Post } from "./components/ejercicio0/Post"
+import Post, {Post2} from "./components/ejercicio0/Post"
 import { CardClassC } from './components/ejercicio1/CardClassC'
 import { CardFunctionalC } from './components/ejercicio1/CardFunctionalC'
 import { CardGroup } from './components/ejercicio2/CardGroup'
 import { CardCoche } from './components/ejercicio3/CardCoche'
 
 function App() {
-  // HOOKS  ---------------------------------
-  // reglas:
-  // 1. Usarlos solo dentro de componentes funcionales
-  // 2. No usarlos en condicionales, ciclos o funciones anidadas (if, for, while....)
-  // 3. Llamar a los Hooks en el principio de la funcion del componente
-  
-  // ------ useState ------------------------
-  // crea una variable para almacenar una pieza del estado
-  // ademas permite actualizar dicho valor en un componente funcional
-  // su valor se preserva incluso luego del re-renderizado
-  // estructura [ {objeto con data clave:valor}, function() ]
 
-  // Ejemplos
-  // const [count, setCount] = useState(0)
-  // const [phone, setPhone] = useState("")
-  // const [username, setUsername] = useState("0")
-  // const [pagado, setPagado] = useState(false)
-  // const [colors, setColors] = useState({day: "orange", night:"blue"})
-
-  //const Post = () => {
-  //   const [likes, setLikes] = useState(0); //correcto
-  //   return <h3>{likes}</h3>;
-  //};
 
 
   return (
@@ -38,6 +16,7 @@ function App() {
       <Title>Hooks --- useState</Title>
       <div className={styles.container}>
         <Post text="Me gusta!"></Post> 
+        <Post2 text="Post 2" />
       </div>
       <CardClassC />
       <CardFunctionalC />

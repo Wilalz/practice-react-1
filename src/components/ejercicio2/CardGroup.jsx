@@ -9,10 +9,6 @@ import { SpiderWeb } from "./SpiderWeb"
 export const CardGroup = () => {
     const [quantity, setQuantity] = useState(0);
 
-
-
-
-
     return (
         <div className={styles.cardElephants}>
             <Title>Add Elephants
@@ -21,12 +17,13 @@ export const CardGroup = () => {
 
             <ButtonAdd className={styles.btnCount} 
                 quantity={quantity} setQuantity={setQuantity}
-                >Add
+                >Add 1 Elephant
             </ButtonAdd>
 
             {/* <div className={styles.elephantsGroup}>{quantity}</div> */}
-            <SpiderWeb setQuantity={setQuantity} />
-            
+            <SpiderWeb
+                quantity={quantity}
+            />
             <Count quantity={quantity}/>
 
 
