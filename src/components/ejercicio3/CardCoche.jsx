@@ -26,7 +26,7 @@ export const CardCoche = ({type}) => {
             <p className={styles.carState}>Este coche 
                 <span>{type}</span> 
                 está:&nbsp;
-                <span className={stateCar === false ? styles.state: styles.stateEncendido}>
+                <span className={stateCar === false ? styles.state : styles.stateEncendido}>
                     {stateCar ? "Encendido" : "Apagado"}</span>
             </p>
 

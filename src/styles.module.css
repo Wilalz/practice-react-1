@@ -28,6 +28,27 @@ button:hover {
   border: var(--border-color) solid 1px;
 }
 
+.card {
+  border: var(--border-color) solid 1px;
+  border-radius: 5px;
+  margin: 5px;
+}
+
+.containerFlex {
+  border: var(--border-color) solid 1px;
+  display: flex;
+  justify-content: space-around;
+}
+
+.cardFlex {
+  border: var(--border-color) solid 1px;
+  border-radius: 5px;
+  margin: 5px;
+  padding: 5px;
+  width: 10em;
+}
+
+
 .quantity {
   margin: 2px;
 }

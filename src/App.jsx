@@ -7,6 +7,7 @@ import { CardFunctionalC } from './components/ejercicio1/CardFunctionalC'
 import { CardPpalElephants } from './components/ejercicio2/CardPpalElephants'
 import { CardCoche } from './components/ejercicio3/CardCoche'
 import { CardList } from "./components/ejercicio4/CardList"
+import CardPokemonState from './components/ejercicio5/CardPokemonState'
 
 function App() {
 
@@ -33,6 +34,8 @@ function App() {
       </div>
       <hr />
       <CardList />
+      <hr />
+      <CardPokemonState />
 
 
     </div>
