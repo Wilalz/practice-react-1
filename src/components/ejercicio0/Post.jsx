@@ -21,15 +21,16 @@ export const Post = ({text}) => {
 
 
 export const Post2 = ({text}) => {
-    const [likes, setLikes] = useState(0);
+
+    const [views, setViews] = useState(0);
 
     return (
         <div className={styles.btnCount}>
-            <button 
-                onClick={ ()=> setLikes(likes+1) }>
-                {text}
+            <button onClick={ () => setViews (views+1)} >
+                😎
             </button>
-            <div className={styles.cardLikes}><span className={styles.quantity}>{likes}</span> &nbsp; me gusta!</div>
+
+            <div className={styles.cardLikes}><span className={styles.quantity}>{views}</span> &nbsp; Views</div>
         </div>
     )
     

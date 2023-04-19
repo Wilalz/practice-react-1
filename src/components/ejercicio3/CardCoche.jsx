@@ -26,7 +26,8 @@ export const CardCoche = ({type}) => {
             <p className={styles.carState}>Este coche 
                 <span>{type}</span> 
                 está:&nbsp;
-                <span className={styles.state}>{stateCar ? "Encendido" : "Apagado"}</span>
+                <span className={stateCar === false ? styles.state: styles.stateEncendido}>
+                    {stateCar ? "Encendido" : "Apagado"}</span>
             </p>
 
 {/* 4. Crear un boton que tenga una funcion  cuando se da click 'onClick' */}

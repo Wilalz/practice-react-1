@@ -4,8 +4,9 @@ import { Title } from './components/Title'
 import Post, {Post2} from "./components/ejercicio0/Post"
 import { CardClassC } from './components/ejercicio1/CardClassC'
 import { CardFunctionalC } from './components/ejercicio1/CardFunctionalC'
-import { CardGroup } from './components/ejercicio2/CardGroup'
+import { CardPpalElephants } from './components/ejercicio2/CardPpalElephants'
 import { CardCoche } from './components/ejercicio3/CardCoche'
+import { CardList } from "./components/ejercicio4/CardList"
 
 function App() {
 
@@ -21,7 +22,7 @@ function App() {
       <CardClassC />
       <CardFunctionalC />
       <hr />
-      <CardGroup />
+      <CardPpalElephants />
       <hr />
       <div className={styles.container}>
         <Title>Encender o Apagar coches</Title>
@@ -31,6 +32,7 @@ function App() {
         <CardCoche type="&#x1F69C;" />
       </div>
       <hr />
+      <CardList />
 
 
     </div>

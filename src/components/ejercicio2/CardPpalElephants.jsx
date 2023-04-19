@@ -6,11 +6,11 @@ import { Count } from "./Count"
 import { useState } from "react"
 import { SpiderWeb } from "./SpiderWeb"
 
-export const CardGroup = () => {
+export const CardPpalElephants = () => {
     const [quantity, setQuantity] = useState(0);
 
     return (
-        <div className={styles.cardElephants}>
+        <div className={styles.cardPpal}>
             <Title>Add Elephants
                 <ElephantEmoji />
             </Title>

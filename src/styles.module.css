@@ -2,6 +2,11 @@
   --border-color: #cccaca;
 }
 
+.toDo {
+  color: red;
+  font-size: 0,7em;
+}
+
 h2 {
     font-size: 3em;
   }
@@ -29,7 +34,7 @@ button:hover {
 
 /* Ejercio 2 - elephans */
 
-.cardElephants {
+.cardPpal {
   display: flex;
   /* justify-content: center; */ /* para centar horizontalmente */ 
   align-items: center;   /* para centrar verticalmente */
@@ -77,8 +82,10 @@ button:hover {
   display: flex;
   justify-content: space-between;
   width: 60%;
-
+  border: var(--border-color) solid 1px;
+  
 }
+
 
 .carState {
   font-size: 20px;
@@ -90,13 +97,20 @@ button:hover {
 }
 
 .carState .state {
+  color: red;
+}
+.carState .stateEncendido {
   color: blue;
-
-
 }
 
 
 
+/* Ejercicio 4 - Agregar articulos a una lista */
+.itemList {
+  background-color: rgb(224, 238, 245);
+  border: solid rgb(120, 166, 187) 1px;
+  border-radius: 3px;
+}
 
 
 
