@@ -15,7 +15,7 @@ button {
   border-radius: 8px;
   border: 1px solid transparent;
   padding: 10px;
-  margin: 2px;
+  margin: 8px;
   font-size: 14px;
   font-family: inherit;
   background-color: #cccccc;
@@ -135,6 +135,19 @@ button:hover {
 
 
 
+/* Ejercicio 6 - Formulario de login */
+
+form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 
 
+}
+input {
+  height: 2rem;
+  margin: 5px;
+  width: 20rem;
+
+}
 
