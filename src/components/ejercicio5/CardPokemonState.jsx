@@ -67,12 +67,12 @@ const CardPokemonState = () => {
     // acá funciona bien - vamos a probar con useState
 
     return (
-        <div className={styles.container}>
-            <Title>Delete Pokemon with State</Title>
-            <div className={styles.containerFlex}>
+        <div className={styles.container} >
+            <Title>5. Deleting a Pokemon</Title>
+            <div className={styles.containerFlex} >
                 {pokemon()}
             </div>
-            
+
             <button onClick={ () => setPokemons (restartList)} >
                 Restart😎
             </button>

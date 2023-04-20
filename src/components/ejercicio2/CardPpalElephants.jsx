@@ -11,7 +11,7 @@ export const CardPpalElephants = () => {
 
     return (
         <div className={styles.cardPpal}>
-            <Title>Add Elephants
+            <Title>2. Add Elephants
                 <ElephantEmoji />
             </Title>
 

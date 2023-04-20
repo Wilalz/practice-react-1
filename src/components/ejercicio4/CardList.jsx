@@ -17,7 +17,7 @@ export const CardList = () => {
 
     return (
         <div className={styles.cardPpal}>
-            <Title>Add to a list</Title>
+            <Title>4. Add to a list</Title>
 
             <ButtonAdd className={styles.btnCount} 
                 quantity={quantity} setQuantity={setQuantity}

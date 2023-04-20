@@ -1,5 +1,6 @@
 import { Component } from "react";
 import styles from "./styles.module.css"
+import { Title } from '../Title'
 
 export class CardClassC extends Component {
     constructor(props) {
@@ -12,12 +13,15 @@ export class CardClassC extends Component {
 
     render() {
         return (
-            <div className={styles.container}>
-                <div className={styles.card}>
-                    <h1>{this.state.title}</h1>
-                    <p>{this.state.body}</p>
+            <>
+                <Title>Tipos de componentes</Title>
+                <div className={styles.container}>
+                    <div className={styles.card}>
+                        <h1>{this.state.title}</h1>
+                        <p>{this.state.body}</p>
+                    </div>
                 </div>
-            </div>
+            </>
         )
     }
 }
