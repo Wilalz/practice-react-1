@@ -64,8 +64,6 @@ const CardPokemonState = () => {
     ]
 
 
-    // acá funciona bien - vamos a probar con useState
-
     return (
         <div className={styles.container} >
             <Title>5. Deleting a Pokemon</Title>

@@ -10,25 +10,28 @@ B) Cuando abandona un campo específico (blur).  // se controla y se ejecuta la 
 C) Al momento en que se envía el formulario. // se controla y se ejecuta la accion de validar cuando el usuario da click en el boton del formulario, por ejemplo enviar
 */ 
 
-/** para este ejmemplo vamos a usar la opcion C) Al momento en que se envía el formulario. */
+/** para este ejemplo vamos a usar la opcion C) Al momento en que se envía el formulario. */
+/** La idea seria que si alguno de los campos no cumple la validacion, 
+ *      se muestra un mensaje de error 
+ *      y "no enviamos los datos al servidor" */
 
 export const FormLogin = () => {
 
-/** 1. un estado para cada input */
+/** 2. un estado para cada input */
     const [userName, setUserName] = useState ("");
     const [email, setEmail] = useState("");
     const [password, setPassword] = useState ("");
     
-/** 2.1. un manejador de evento para cada input para actualizar los estados */
-const onChangeUserName = (e) => setUserName(e.target.value);
-const onChangeEmail = (e) => setEmail(e.target.value);
-const onChangePassword = (e) => setPassword(e.target.value);
+/** 3.1. un manejador de evento para cada input para actualizar los estados */
+    const onChangeUserName = (e) => setUserName(e.target.value);
+    const onChangeEmail = (e) => setEmail(e.target.value);
+    const onChangePassword = (e) => setPassword(e.target.value);
 
-/** 2.2. crear un manejador para el formulario
+/** 3.2. crear un manejador para el formulario
          * este sera asignado al form "onSubmit={onSubmitForm}"
          * y el boton de enviar del formulario debe tener "type="submit""
          */
-/** 5. Utilizamos las funciones de validacion dentro del manejador de eventos que se ejecuta al enviar el formulario */
+/** 6. Utilizamos las funciones de validacion dentro del manejador de eventos que se ejecuta al enviar el formulario */
     const onSubmitForm = (e) => {
         e.preventDefault();
 
@@ -36,7 +39,7 @@ const onChangePassword = (e) => setPassword(e.target.value);
         const isEmailValid = validateEmail(email);
         const isPasswordValid = validatePassword(password);
         
-        console.log(`isEvld ${isEmailValid}`)
+        // console.log(`isEmailValid ${isEmailValid}`)
 
         if (isUserNameValid && isPasswordValid && isEmailValid ){
             alert(`Datos validados.
@@ -48,10 +51,10 @@ const onChangePassword = (e) => setPassword(e.target.value);
 
         };
 
-/** 4. Crear las validaciones */
+/** 5.1. Crear las validaciones */
         /** para este ejemplo: 
          * name: a) que no tenga espacios en blanco, b) que tenga al menos 3 caracteres
-         * email: a) que sea un email valido (contine @ y .com)
+         * email: a) que sea un email valido (contiene "@"" y ".com")
          * contraseña: a) que tenga al menos 6 caracteres, b) uno de los caracteres debe ser numero
          */
     const validateUserName = (userName) => {
@@ -64,7 +67,7 @@ const onChangePassword = (e) => setPassword(e.target.value);
             }
     }
     
-    /** para este ejemplo utilicé Expresiones Regulares y el metodo test RegExp.test() */
+/** 5.2. para este ejemplo utilicé Expresiones Regulares y el metodo RegExp.test() */
     const validateEmail = (email) => {
         const emailRegExp = /^(([^<>()[\]\.,;:\s@\"]+(\.[^<>()[\]\.,;:\s@\"]+)*)|(\".+\"))@(([^<>()[\]\.,;:\s@\"]+\.)+[^<>()[\]\.,;:\s@\"]{2,})$/i
 
@@ -74,8 +77,6 @@ const onChangePassword = (e) => setPassword(e.target.value);
             return false;
         }
     }
-
-        
 
     const validatePassword = (password) => {
         const withoutSpaces = password.trim();
@@ -96,13 +97,16 @@ const onChangePassword = (e) => setPassword(e.target.value);
         }
     };
 
-
-/** 3. el formulario que tiene 3 input (name, email y password) y un boton para enviar */
-        /** estos usan los manejadores de eventos onChangeXxxxx */
+/** 1. Crear la estructura basica del fomulario, este tiene 3 input (name, email y password) y un boton para enviar*/
+/** 4. Los imputs usan los manejadores de eventos onChangeXxxxx  */
     return (
         <div className={styles.container}>
             <Title>6. Login Form</Title>
             <h3>Log in</h3>
+            <br /> 
+            <p>Nombre mayor a 3 caracteres,</p>
+            <p>Email valido tiene "@" y un dominio</p>
+            <p>Contraseña mayor a 5 caracteres y al menos un numero</p>
             <form onSubmit={onSubmitForm}>
                 <input
                     type='text'
@@ -133,4 +137,6 @@ const onChangePassword = (e) => setPassword(e.target.value);
 };
 
 
-/** Nota: algo bueno para implementar a futuro es que indique cuales campos tiene problemas, para dar una mejor experiencia al usuario */
+/** Nota: Implementar a futuro para dar una mejor experiencia al usuario
+ *      indique las caracteristicas que debe tener cada campo y
+ *      si no cumple, indicar cuales campos que tienen problemas, */

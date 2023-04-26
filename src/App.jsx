@@ -9,6 +9,7 @@ import { CardCoche } from './components/ejercicio3/CardCoche'
 import { CardList } from "./components/ejercicio4/CardList"
 import CardPokemonState from './components/ejercicio5/CardPokemonState'
 import { FormLogin } from "./components/ejercicio6/FormLogin"
+import { FormRejuvenecedor } from "./components/ejercicio7/FormRejuvenecedor"
 
 function App() {
 
@@ -41,6 +42,8 @@ function App() {
       <CardPokemonState />
       <hr />
       <FormLogin />
+      <hr />
+      <FormRejuvenecedor />
 
 
 

@@ -151,3 +151,30 @@ input {
 
 }
 
+/* Ejercicio 7 - Formulario rejuvenecedor */
+
+.imgStart {
+  padding: 10px 20px;
+  border: none;
+  font-size: 17px;
+  color: #fff;
+  border-radius: 7px;
+  letter-spacing: 4px;
+  font-weight: 700;
+  text-transform: uppercase;
+  transition: 0.5s;
+  transition-property: box-shadow;
+  background: rgb(0,140,255);
+}
+
+
+.imgStart:hover {
+  box-shadow: 0 0 5px rgb(0,140,255),
+              0 0 15px rgb(54, 165, 255),
+              0 0 40px rgb(146, 255, 231);
+}
+
+
+.error_msg {
+  color: red;
+}
