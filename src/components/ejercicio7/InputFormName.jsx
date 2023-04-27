@@ -14,20 +14,20 @@ C) Al momento en que se envía el formulario. // se controla y se ejecuta la acc
  *      y "no enviamos los datos al servidor" */
 
 
-export const ImputFormName = ({minlength=1, maxlength=20, msg }) => {
+export const InputFormName = ({minlength=1, maxlength=20, msg }) => {
 // 2. Crear estados para el campo
     const [valueText, setValueText ] = useState("");
     const [validText, setValidText] = useState(false);
 
 // 3. Crear un manejador del evento, que ejecuta las funciones al suceder el evento
+// 7. Usar las validaciones dentro del manejador del evento
     const onChangeText = (e) => {
-        const withoutSpaces = e.target.value.trim()
-        setValueText (withoutSpaces)
+        const withoutSpaces = e.target.value.trim();
+        setValueText (withoutSpaces);
         validateText(withoutSpaces);
     }
 
-    // acá todo funciona, vamos a rorregir el setState en el if
-
+// 6. Crear las validaciones del campo
     const validateText = (text) => {
         const textAsArray = text.split("")
         // console.log(`textAsArray: ${textAsArray}`)
@@ -35,16 +35,12 @@ export const ImputFormName = ({minlength=1, maxlength=20, msg }) => {
         const hasNumber = textAsArray.some((char) => {
             if (!isNaN(char)){
                 return true;
-            }else {
-                return false;
             }
         })
         
         const isValidLength = () => {
             if (text.length >= minlength && text.length <= maxlength){
                 return true;
-            }else {
-                return false;
             }
         }
         
@@ -55,7 +51,8 @@ export const ImputFormName = ({minlength=1, maxlength=20, msg }) => {
         }
     }
 
-// 1. Crear estructura del campo
+// 1. Crear estructura del campo en el formulario
+// 5. el imput usa el manejador del evento
     return (
         <>
             <input
@@ -65,9 +62,10 @@ export const ImputFormName = ({minlength=1, maxlength=20, msg }) => {
                 onChange={onChangeText}
                 >    
             </input>
-            <p>{msg}</p>
-            {validText ? "" : <span className={styles.error_msg}>Hay un error en este campo</span>}
-        
+            {validText ? "" : <span className={styles.error_msg}>{msg}</span>}
+            {validText ? "" : <span className={styles.error_msg}>There is an error in this field</span>}        
         </>
     )
 }
+
+// 4. Manejador para el formulario en el padre

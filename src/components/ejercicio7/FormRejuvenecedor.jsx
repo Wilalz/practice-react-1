@@ -1,13 +1,17 @@
-import React from 'react'
+import React , {useState} from 'react'
 import { Title } from '../Title'
 import styles from '../../styles.module.css'
-import { ImputFormName } from './ImputFormName'
+import { InputFormName } from './InputFormName'
+import { InputFormYear } from './inputFormYear'
+
 
 export const FormRejuvenecedor = () => {
     const onSubmitForm = (e) => {
         e.preventDefault();
-
-        // validar que no hayan errores y envia el formulario
+        if(validYear === true){
+            console.log(true)
+        }
+        // validar que no hayan errores EN LOS 2 INPUTs y envia el formulario
 
 
     }
@@ -19,17 +23,17 @@ export const FormRejuvenecedor = () => {
             <Title>7. Rejuvenecedor</Title>
             <h3>Rejuvenates 10 years</h3>
             <form onSubmit={onSubmitForm}>
-                <ImputFormName 
+                <InputFormName 
                     minlength="1"
                     maxlength="10"
                     msg="Text only, 1 to 10 characters"
-                    />
-                <div>
-                    <input
-                        placeholder="Year of birth"
-                        />
-                    <p>Numbers only between 1900 and 2013</p>
-                </div>
+                />
+                <InputFormYear 
+                    min="1900"
+                    max="2013"
+                    msg="Numbers only between 1900 and 2013"
+                />
+
                 <button 
                     className={styles.imgStart}>
                     Start
