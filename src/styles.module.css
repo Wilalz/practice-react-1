@@ -153,7 +153,7 @@ input {
 
 /* Ejercicio 7 - Formulario rejuvenecedor */
 
-.imgStart {
+.buttonBlue {
   padding: 10px 20px;
   border: none;
   font-size: 17px;
@@ -168,7 +168,7 @@ input {
 }
 
 
-.imgStart:hover {
+.buttonBlue:hover {
   box-shadow: 0 0 5px rgb(0,140,255),
               0 0 15px rgb(54, 165, 255),
               0 0 40px rgb(146, 255, 231);
