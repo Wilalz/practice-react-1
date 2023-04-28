@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lernings</title>
+</head>
+<body>
+    <h1>React</h1>
+    <h2>Importar</h2>
+        <p>En un archivo puedo tener dentro varios componentes que retornan elemtos DOM diferentes. Al momento de importarlos dentro de otros archivos debo diferenciar cual exactamente requiero, si dentro del archivo puse export a cada uno de los componentes, al momento de importarlos debo usar {Destructuring, Otro}. Pero si puse "export default Otro" lo puedo llamar sin o con el Destructuring -- Ver ejercicio 0 --
+        </p>
+        <code>import Post, {Post2} from "./components/ejercicio0/Post"</code>
+
+    <h2>Componente </h2>
+        <p>En una pieza de codigo reutilizable, trabaja como una funcion en cuanto a que recibe unos parametros llamados "props", puede ejecutar codigo y funciones, y retorna un resultado que es HTML. Se define con la primera letra en mayusculas ejemplo "CardClassComponent"  Para que se pueda utilizar en otros lugares necesitamos definir dentro "export"
+            <code> export const CardFunctionalC = () => { /* codigo */} </code>
+            Para utilizar un componente en otro lugar, debemos mandarlo a llamar con "import"
+            <code> import { CardClassC } from './components/ejercicio1/CardClassC' </code>
+            Al nombrar el componente se ejecuta toda su logica, buscando renderizar su HTML. Se llama como si fuera una etiqueta de HTML, requiere un cierre
+            <code> <CardFunctionalC /> </code>
+            <code> <CardFunctionalC> </CardFunctionalC> </code>
+            -- Ver ejercicio 1 --
+        </p>
+        <h3>Componente de clase </h3>
+            <p>Tiene un constructor con "super(props)" y "this.state", ademas tambien necesita un metodo "render()" y dentro de éste el metodo <code>return()</code> que adentro contendrá el HTML que mostrará -- Ver ejercicio 1 --
+            </p>
+        <h3>Componente funcional </h3>
+            <p>Se declara como una funcion o una variable, debe tener el metodo <code>return()</code> donde se indicará el HTML a mostrar. Ademas, puede tener hooks para manejar su estado (mas adelante se muestra como), 
+
+        </p>
+        <code> </code>
+    <h2>HOOKS </h2>
+        <h3>reglas: </h3>
+            <ul>
+                <li>Usarlos solo dentro de componentes funcionales</li>
+                <li>Llamar a los Hooks en el principio de la funcion del componente</li>
+                <li>No usarlos en condicionales, ciclos o funciones anidadas (if, for, while....)</li>
+            </ul>
+        <h3>useState</h3>
+            <p>crea una variable para almacenar una pieza del estado
+                ademas permite actualizar dicho valor en un componente funcional. Su valor se preserva incluso luego del re-renderizado. 
+                <p> Su estructura es (A) un objeto con datos (clave: valor) y (B) una funcion para setear o definir un nuevo valor del mismo objeto, no es que lo redefina, sino que lo genera un estado completamente nuevo</p>
+                <p>finalmente se iguala a useState() y dentro de los parentesis se puede definir como un texto, numero, boolean, array, objeto</p>
+                <code>[ {objeto clave:valor}, function() ]</code>
+                <code>const [count, setCount] = useState(0)</code>
+                <code>const [phone, setPhone] = useState("")</code>
+                <code>const [username, setUsername] = useState("0")</code>
+                <code>const [pagado, setPagado] = useState(false)</code>
+                <code>const [colors, setColors] = useState({day: "orange", night:"blue"})</code>
+            </p>
+            <p>Ejemplo -- Ver ejercicio 0 --</p>
+                <code>const Post = () => {
+                    const [likes, setLikes] = useState(0); //correcto
+                    return <h3>{likes}</h3>;
+                    };
+                </code>
+    <h2>Usar estilos CSS</h2>
+        <p>A los componente tambien se les puede definir un <code>id = "ejemplo"</code> o class para luego poder seleccionarlos, sin embargo, no se usa class, sino, <code>className = "ejemplo"</code>
+        </p>
+        <h3>styles.module.css</h3>
+            <p>Es una manera alternativa de manejar css por modulos y evitar que el codigo se pise así mismo, es decir que no hayan conflictos por selectores</p>
+            <p>Debemos crear un archvio llamado <code>styles.module.css</code> que tiene adentro el CSS con todas sus definiciones, por ejemplo, un selector de clase para una tarjeta <code>.card</code></p>
+            <p>Ahora en el componente importar el style así <code>import styles from "./styles.module.css"</code> de esta manera se vincula el css y se pude utilizar para definir los selectores en los elemtos html del componente, ejemplo, <code><div className={styles.card}></div></code> así es como dinamicamente se le trasfiere el selector .card al div</p>
+            <p>internamente, module le asigna un hash a cada elemento html para que no hayan conflictos -- Ver ejercicio 1 --</p>
+
+
+
+
+
+
+
+
+
+
+
+</body>
+</html>

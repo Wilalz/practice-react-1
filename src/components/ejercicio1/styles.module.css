@@ -1,0 +1,16 @@
+.container {
+    width: 800px;
+    border: #555555 solid 1px;
+    background-color: cadetblue;
+    margin: 5px;
+    border-radius: 10px;
+}
+
+
+.card {
+    border: #555555 solid 1px;
+    width: 300px;
+    background-color: rgb(245, 245, 220);
+    margin: 5px;
+    border-radius: 10px;
+}
