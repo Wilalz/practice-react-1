@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lernings 3</title>
+</head>
+<body>
+    <h1>React</h1>
+    
+    <h2>Eventos</h2>
+        <p>Se refiere a las acciones que tiene un usuario en una app, las aciones del mouse (click, scroll) y del teclado (pulsacion de tecla) sobre los elementos de la pagina web. Lo que buscamos es manejar esos eventos y reaccionar para llevar a cabo una <strong>funcion</strong> asociada</p>
+        <h3>Tipos de eventos</h3>
+            <ul>
+                <li>Nativos del navegador JS Vanila (mouse, teclado)
+                    <code>addEventListener("mouseover", (event) => {});</code></li>
+                <li>Sinteticos (SyntheticEvents) React crea una capa sobre los eventos nativos para darle soporte a los eventos de todos los navegadores
+                    <code>&lt;button&gt; onClick={handlerOnClick} &lt;/button&gt;</code>
+                </li>
+                <li>Personalizados, creados por un dev</li>
+            </ul>
+        <p><strong>Nota:</strong> siempre, despues de un evento viene una funcion!</p>
+        <p>Si la funcion es corta se puede poner directamente <code>onClick={setName="Pedro"}</code></p>
+        <p>Si se llama una funcion... si se ponen los parentesis al final haráq que se ejecute automaticamente la funcion
+            <code>onClick={funcionIncrementar()}</code>
+        </p>
+        <p>Si la funcion es muy larga, lo recomentable es poner un {handlerOnClick} que es una referencia a una funcion, es un llamado a esa funcion, que estará definida dentro del componente</p>
+        <p>normalmente en un imput buscamos optener el value del target (elemento) del evento 
+            <code>{(e) => e.target.value}</code></p>
+        <h4>Ejemplos</h4>
+            <p>onChange - sirve para leer cambios de un input en un formulario</p>
+            <p>onClick - para reaccionar cuando se dá un click</p>
+        
+
+
+
+
+
+
+</body>
+</html>

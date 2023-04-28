@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lernings 2</title>
+</head>
+<body>
+    <h1>React</h1>
+
+    <h2>Usar estilos CSS</h2>
+        <p>A los componente tambien se les puede definir un <code>id = "ejemplo"</code> o class para luego poder seleccionarlos, sin embargo, no se usa class, sino, <code>className = "ejemplo"</code>
+        </p>
+        <h3>styles.module.css</h3>
+            <p>Es una manera alternativa de manejar css por modulos y evitar que el codigo se pise así mismo, es decir que no hayan conflictos por selectores</p>
+            <p>Debemos crear un archvio llamado <code>styles.module.css</code> que tiene adentro el CSS con todas sus definiciones, por ejemplo, un selector de clase para una tarjeta <code>.card</code></p>
+            <p>Ahora en el componente importar el style así <code>import styles from "./styles.module.css"</code> de esta manera se vincula el css y se pude utilizar para definir los selectores en los elemtos html del componente, ejemplo, <code><div className={styles.card}></div></code> así es como dinamicamente se le trasfiere el selector .card al div</p>
+            <p>internamente, module le asigna un hash a cada elemento html para que no hayan conflictos -- Ver ejercicio 1 --</p>
+    
+    <hr>
+    <h2>OJO, REVISAR LOS EJERCICIOS 1 AL 8 PARA VER QUE MAS DEBE INCLUIRSE EN ESTE ARCHIVO</h2>
+    <hr>
+
+
+
+
+
+
+
+
+
+</body>
+</html>
