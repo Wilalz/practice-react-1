@@ -52,8 +52,12 @@ export const InputFormName = ({minlength=1, maxlength=20, msg, valueText, setVal
         }
     }
 
-// 1. Crear estructura del campo en el formulario
-// 5. el imput usa el manejador del evento
+    const hayError = !validText
+    
+    
+    // 1. Crear estructura del campo en el formulario
+    // 5. el imput usa el manejador del evento
+    
     return (
         <>
             <input
@@ -63,8 +67,14 @@ export const InputFormName = ({minlength=1, maxlength=20, msg, valueText, setVal
                 onChange={onChangeText}
                 >    
             </input>
+
+{/* Acá estamos haciendo una validacion, si valid text es true, pone "" vacio, pero si es false muestra un <span> de mensaje de error */}
             {validText ? "" : <span className={styles.error_msg}>{msg}</span>}
-            {validText ? "" : <span className={styles.error_msg}>There is an error in this field</span>}        
+{/* Esta es otra validacion para otro mensaje de error */}
+{/* // si hacemos que valid nos llegue es un true como indicador de un problema, podemos hacer una implementacion diferente en el msg de error */}
+{/* Si hayError es true y <span> es true porque no está vacio */}
+{/*     entonces se muestra el <span>, es decir, si el primero es true se muestra el segundo */}
+            {hayError && <span className={styles.error_msg}>There is an error in this field</span>}        
         </>
     )
 }

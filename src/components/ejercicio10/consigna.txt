@@ -1,0 +1,7 @@
+Para esta actividad práctica, deberás clonar el repositorio a través del enlace:
+https://github.com/brunowbbs/mesa-9
+
+
+Crear un formulario que registra alumnos y sus notas
+
+Ademas tiene una tabla que promedia la nota de todos los alumnos en cada materia

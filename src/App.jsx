@@ -12,6 +12,9 @@ import { FormLogin } from "./components/ejercicio6/FormLogin"
 import { FormRejuvenecedor } from "./components/ejercicio7/FormRejuvenecedor"
 import { StudentList } from "./components/ejercicio8/StudentList"
 import { RegistrationForm } from "./components/ejercicio9/RegistrationForm"
+import { FormQualification } from "./components/ejercicio10/FormQualification"
+import { FormTeacher } from "./components/ejercicio11/form"
+import { FormParcial } from "./components/ejercicio12/Examen-parcial-DH/FormParcial"
 
 function App() {
 
@@ -50,6 +53,12 @@ function App() {
       <StudentList />
       <hr />
       <RegistrationForm />
+      <hr />
+      <FormQualification />
+      <hr />
+      <FormTeacher />
+      <hr />
+      <FormParcial />
 
 
 

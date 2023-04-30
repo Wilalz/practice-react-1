@@ -1,5 +1,5 @@
 import { Title } from '../Title'
-import { useState, useEffect } from 'react'
+import { useState } from 'react'
 import Item from './Item';
 import { ButtonAdd } from '../ejercicio2/ButtonAdd';
 import styles from "../../styles.module.css"
